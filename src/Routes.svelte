@@ -2,6 +2,9 @@
 	import Navaid from 'navaid';
 	import { onDestroy } from 'svelte';
 	import Index from './routes/index.svelte'
+	import StartIndex from './routes/start/index.svelte'
+	import StartLabels from './routes/start/labels.svelte'
+	import Upload from './routes/upload.svelte'
 	let Route;
 	let params=undefined
 	let uri = location.pathname;
@@ -17,6 +20,9 @@
 
 	const router = Navaid('/')
 		.on('/', () => {params = undefined; Route = Index;})
+		.on('/start/', () => {params = undefined; Route = StartIndex;})
+		.on('/start/labels', () => {params = undefined; Route = StartLabels;})
+		.on('/upload', () => {params = undefined; Route = Upload;})
 		.listen();
 	onDestroy(router.unlisten);
 </script>

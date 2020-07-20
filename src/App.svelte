@@ -7,6 +7,11 @@
 
 <style global lang="scss">
 	@import "main.scss";
+
+	main {
+		max-width: 80%;;
+		margin: 0 auto;
+	}
 </style>
 
 <Navbar bind:application></Navbar>

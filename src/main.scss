@@ -5,21 +5,22 @@
 // Set your brand colors
 $purple: #8A4D76;
 $pink: #FA7C91;
-$brown: #757763;
+// $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
 $new-gray: #404040;
 $new-gray-light: #505050;
+$new-gray-lighter: #606060;
 $new-orange: orange;
 $new-yellow: yellow;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
+// $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $new-orange;
-$link: $pink;
+$link: $new-orange;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
@@ -33,7 +34,10 @@ $navbar-dropdown-background-color: $new-gray;
 $navbar-divider-background-color: $new-gray-light;
 $navbar-dropdown-border-top: 2px solid $new-gray-light !default;
 $body-overflow-y: auto;
-$button-color: red;
+$body-color: white;
+$input-background-color: $new-gray-lighter;
+$input-color: $new-orange;
+$input-border-color: $new-orange;
 
 
 // $control-border-width: 2px;

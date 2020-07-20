@@ -4,9 +4,9 @@ const app = new App({
 	target: document.body,
 	props: {
 		application:  {
-			displayName: 'Template',
-			name: 'template',
-			url: 'template.serrer.dev'
+			displayName: 'Cost Reporter',
+			name: 'cost-reporter',
+			url: 'https://cost-reporter.serret.dev'
 		}
 	}
 });
