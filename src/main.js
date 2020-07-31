@@ -6,7 +6,7 @@ const app = new App({
 		application:  {
 			displayName: 'Cost Reporter',
 			name: 'cost-reporter',
-			url: 'https://cost-reporter.serret.dev'
+			url: 'https://costs.serret.dev'
 		}
 	}
 });

@@ -1,6 +1,7 @@
 <script>
 	import Navaid from 'navaid';
 	import { onDestroy } from 'svelte';
+	import AppIndex from './routes/app/index.svelte'
 	import Index from './routes/index.svelte'
 	import StartIndex from './routes/start/index.svelte'
 	import StartLabels from './routes/start/labels.svelte'
@@ -19,6 +20,7 @@
 	addEventListener('popstate', track);
 
 	const router = Navaid('/')
+		.on('/app/', () => {params = undefined; Route = AppIndex;})
 		.on('/', () => {params = undefined; Route = Index;})
 		.on('/start/', () => {params = undefined; Route = StartIndex;})
 		.on('/start/labels', () => {params = undefined; Route = StartLabels;})

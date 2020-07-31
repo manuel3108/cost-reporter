@@ -1,5 +1,13 @@
 <script>
     import { name } from '../../stores/user'
+    import { api } from '../../stores/google-drive'
+    import { fileId, fileName } from '../../stores/config'
+
+    $api.create($fileName).then((data) => {
+        let { id } = data.result;
+        $fileId = id;
+        console.log(id)
+    });
 </script>
 
 <span>Money is a personal thing, so let us know your name:</span>

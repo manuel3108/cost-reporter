@@ -1,15 +1,39 @@
-<!-- <script>
-    import Dropzone from "svelte-dropzone";
-    const addedfile = file => console.log(file);
-    const drop = event => console.log(event.target);
-    const init = () => console.log("dropzone init ! 😍");
+<script>
+	let files = {
+		accepted: [],
+		rejected: [],
+	};
+
+	function handleFilesSelect(e) {
+		const { acceptedFiles, fileRejections } = e.detail;
+		files.accepted = [...files.accepted, ...acceptedFiles];
+		files.rejected = [...files.rejected, ...fileRejections];
+	}
 </script>
 
-<Dropzone
-  dropzoneClass="dropzone"
-  hooveringClass="hooveringClass"
-  id="id"
-  dropzoneEvents={{ addedfile, drop, init }}
-  options={{ clickable: true, acceptedFiles: 'text/javascript', maxFilesize: 256, init }}>
-  <p>Drop files here to upload</p>
-</Dropzone> -->
+<style global lang="scss">
+	:global(custom-dropzone) {
+		background-color: red;
+	}
+</style>
+
+<div tabindex="0" class="dropzone">
+	<div class="file">
+		<label class="file-label">
+			<input class="file-input" type="file" name="resume">
+			<span class="file-cta">
+				<span class="file-icon">
+					<i class="fas fa-upload"></i>
+				</span>
+				<span class="file-label">
+					Choose a file…
+				</span>
+			</span>
+		</label>
+	</div>
+</div>
+<ol>
+	{#each files.accepted as item}
+		<li>{item.name}</li>
+	{/each}
+</ol>
